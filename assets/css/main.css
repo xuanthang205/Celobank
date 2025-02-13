@@ -11,6 +11,10 @@ html {
     scroll-margin-top: 76px;
 }
 
+#products {
+    scroll-margin-top: 11px;
+}
+
 body {
     font-size: 1.6rem;
     font-family: "Open Sans", sans-serif;
@@ -85,6 +89,14 @@ a {
     background-color: currentColor;
 }
 
+.section-heading {
+    color: #212832;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 12px;
+}
+
 /* Header */
 .header {
     padding: 42px 0 12px;
@@ -94,7 +106,7 @@ a {
     position: sticky;
     top: -30px;
     background-color: #fff;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header__cta,
@@ -107,7 +119,6 @@ a {
 
 .header__inner {
     justify-content: space-between;
-
 }
 
 .nav__list {
@@ -494,4 +505,160 @@ a {
     margin-top: -16px;
     color: #fff;
     line-height: normal;
+}
+
+/* How is works */
+.works {
+    padding: 80px 0;
+}
+
+.works__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.works__media {
+    width: 48.72%;
+}
+
+.works__media-wrap,
+.works__media-img-wrap {
+    position: relative;
+}
+
+.works__media-img-wrap {
+    width: 82.5%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.works__media-img-wrap::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(../images/workdecor.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 88%;
+}
+
+.works__media-img {
+    width: 97%;
+    position: relative;
+    z-index: 1;
+}
+
+.works__decor {
+    position: absolute;
+    background-color: #fff;
+    display: flex;
+}
+
+.works__decor:first-of-type {
+    top: 76px;
+    right: 162px;
+    z-index: 1;
+    background-color: #7264d6;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.works__decor:first-of-type img {
+    position: relative;
+    z-index: 1;
+}
+
+.works__decor:first-of-type::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.works__decor:nth-of-type(2) {
+    z-index: 1;
+    bottom: 96px;
+    right: 0;
+    border-radius: 8px;
+    background: #fffdfa;
+    box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.07);
+    padding: 15px;
+}
+
+.works__decor-icon {
+    position: relative;
+    background-color: #4ab5e3;
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works__decor-icon::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.works__decor-icon::after {
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: url(../icons/workscheck-icon.svg);
+}
+
+.works__decor-body {
+    margin-left: 10px;
+}
+
+.works__decor-heading {
+    color: #212832;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.works__decor-desc {
+    margin-top: 5px;
+    color: #696d76;
+    font-size: 1.2rem;
+    line-height: normal;
+}
+
+.works__content {
+    width: 40.2%;
+}
+
+.works__body {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.works__item-heading {
+    color: #212832;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.works__item-desc {
+    margin-top: 16px;
+    color: #696d76;
+    line-height: 1.75;
 }
