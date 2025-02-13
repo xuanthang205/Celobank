@@ -1,65 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celo Bank | Digital Payment For Everyone.</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Embed font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <!-- Styles -->
-     <link rel="stylesheet" href="./assets/css/main.css">
-</head>
-<body>
-    <!-- Header -->
-     <header class="header sticky">
-        <div class="container">
-            <div class="header__inner">
-                <div class="header__content">
-                    <img src="./assets/images/Logo.svg" alt="Celo Bank">
-                    <nav class="nav">
-                        <ul class="nav__list">
-                            <li>
-                                <a href="#!" class="nav__list-link">Home</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="nav__list-link">Products</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="nav__list-link">Features</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="nav__list-link">Blog</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header__cta">
-                    <a href="#!" class="header__cta-link">Log in</a>
-                    <a href="#!" class="btn header__cta-btn">Sign up</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Celo Bank | Digital Payment For Everyone.</title>
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./assets/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="./assets/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- Embed font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header sticky">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__content">
+                        <a href="#"><img src="./assets/images/Logo.svg" alt="Celo Bank" /></a>
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li>
+                                    <a href="#home" class="nav__list-link">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="nav__list-link"
+                                        >Products</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#!" class="nav__list-link"
+                                        >Features</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#!" class="nav__list-link">Blog</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__cta">
+                        <a href="#!" class="header__cta-link">Log in</a>
+                        <a href="#!" class="btn header__cta-btn">Sign up</a>
+                    </div>
                 </div>
             </div>
-        </div>
-     </header>
-</body>
+        </header>
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero__inner">
+                    <div class="hero__content">
+                        <p class="section-label">Digital Smart Wallet</p>
+                        <h1 class="hero__heading">
+                            Digital
+                            <b class="hero__heading-modify">Payment</b> For
+                            Everyone.
+                        </h1>
+                        <p class="hero__desc">
+                            We bring together everything that’s required to
+                            build websites and apps that accept payments and
+                            send payouts globally. We are the best platform.
+                        </p>
+                        <form
+                            action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                            class="hero-form"
+                        >
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="hero-form__input"
+                                placeholder="Your email address"
+                                required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            />
+                            <button type="submit" class="btn hero-form__btn">
+                                Get started
+                            </button>
+                        </form>
+                        <p class="hero__note">
+                            *We’ll respect the inbox and never share your email.
+                        </p>
+                    </div>
+
+                    <div class="hero__media">
+                        <div class="phone__wrap">
+                            <img
+                                src="./assets/images/Mobile.png"
+                                alt=""
+                                class="phone-img"
+                            />
+                            <div class="phone__inner">
+                                <div class="card">
+                                    <div class="card__top">
+                                        <div class="card__top-content">
+                                            <p class="card__top-label">
+                                                Main Balance
+                                            </p>
+                                            <span class="card__top-price"
+                                                >$78,355.17</span
+                                            >
+                                        </div>
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="card__body">
+                                        <p class="card__body-label">
+                                            VALID THUR
+                                        </p>
+                                        <p class="card__body-label">
+                                            CARD HOLDER
+                                        </p>
+                                        <time class="card__body-value"
+                                            >08/22</time
+                                        >
+                                        <p class="card__body-value">
+                                            Md Moshqur Alam
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="phone__body">
+                                    <div class="phone__row">
+                                        <h3 class="phone__heading">
+                                            Transections
+                                        </h3>
+                                        <img
+                                            src="./assets/icons/phoneicon1.svg"
+                                            alt=""
+                                            class="phone__icon"
+                                        />
+                                    </div>
+                                    <div class="phone__list">
+                                        <div class="phone__item">
+                                            <div class="phone__item-icon">
+                                                <img
+                                                    src="./assets/icons/income.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="phone__item-body">
+                                                <div class="phone__row top">
+                                                    <h4
+                                                        class="phone__item-body-up"
+                                                    >
+                                                        Received Money
+                                                    </h4>
+                                                    <span
+                                                        class="phone__item-body-up"
+                                                        >+$1,600</span
+                                                    >
+                                                </div>
+
+                                                <div class="phone__row bottom">
+                                                    <p
+                                                        class="phone__item-body-down"
+                                                    >
+                                                        email@gmail.com
+                                                    </p>
+                                                    <span
+                                                        class="phone__item-body-down"
+                                                    >
+                                                        Sep 23
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="phone__item">
+                                            <div class="phone__item-icon">
+                                                <img
+                                                    src="./assets/icons/paper-plane.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="phone__item-body">
+                                                <div class="phone__row top">
+                                                    <h4
+                                                        class="phone__item-body-up"
+                                                    >
+                                                        Send Money
+                                                    </h4>
+                                                    <span
+                                                        class="phone__item-body-up"
+                                                        >- $600</span
+                                                    >
+                                                </div>
+
+                                                <div class="phone__row bottom">
+                                                    <p
+                                                        class="phone__item-body-down"
+                                                    >
+                                                        Airbnb Payment
+                                                    </p>
+                                                    <span
+                                                        class="phone__item-body-down"
+                                                    >
+                                                        Sep 23
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="phone__item">
+                                            <div class="phone__item-icon">
+                                                <img
+                                                    src="./assets/icons/income2.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="phone__item-body">
+                                                <div class="phone__row top">
+                                                    <h4
+                                                        class="phone__item-body-up"
+                                                    >
+                                                        Received Money
+                                                    </h4>
+                                                    <span
+                                                        class="phone__item-body-up"
+                                                        >+$1,600</span
+                                                    >
+                                                </div>
+
+                                                <div class="phone__row bottom">
+                                                    <p
+                                                        class="phone__item-body-down"
+                                                    >
+                                                        Upwork Earning
+                                                    </p>
+                                                    <span
+                                                        class="phone__item-body-down"
+                                                    >
+                                                        Sep 23
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="phone__item">
+                                            <div class="phone__item-icon">
+                                                <img
+                                                    src="./assets/icons/wallet.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="phone__item-body">
+                                                <div class="phone__row top">
+                                                    <h4
+                                                        class="phone__item-body-up"
+                                                    >
+                                                        Pay Bill
+                                                    </h4>
+                                                    <span
+                                                        class="phone__item-body-up"
+                                                        >- $600</span
+                                                    >
+                                                </div>
+
+                                                <div class="phone__row bottom">
+                                                    <p
+                                                        class="phone__item-body-down"
+                                                    >
+                                                        Electricity Bill
+                                                    </p>
+                                                    <span
+                                                        class="phone__item-body-down"
+                                                    >
+                                                        Sep 23
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="phone__decor phone__decor-1">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M1 11V19H19V11"
+                                        stroke="#8376E2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M10 1V13M10 13L13 10M10 13L7 10"
+                                        stroke="#8376E2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+
+                                <p class="phone__decor-1-desc">Deposite</p>
+                                <span class="phone__decor-1-amount"
+                                    >$32000</span
+                                >
+                            </div>
+
+                            <div class="phone__decor phone__decor-2">
+                                <img
+                                    src="./assets/icons/phonedecor2.svg"
+                                    alt=""
+                                />
+
+                                <div>
+                                    <span class="phone__decor-2-amount"
+                                        >$1.310</span
+                                    >
+                                    <p class="phone__decor-2-desc">
+                                        SECURED FUNDS
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="phone__decor phone__decor-3">
+                                <span class="phone__decor-3-percent">0%</span>
+                                <p class="phone__decor-3-desc">Interest</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>

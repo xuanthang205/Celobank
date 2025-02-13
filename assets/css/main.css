@@ -7,6 +7,10 @@ html {
     scroll-behavior: smooth;
 }
 
+#home {
+    scroll-margin-top: 76px;
+}
+
 body {
     font-size: 1.6rem;
     font-family: "Open Sans", sans-serif;
@@ -14,6 +18,15 @@ body {
 }
 
 /* Common */
+@keyframes fade {
+    0% {
+        transform: translateX(-4px);
+    }
+    100% {
+        transform: translateX(4px);
+    }
+}
+
 button,
 input {
     font-family: inherit;
@@ -56,6 +69,22 @@ a {
     background-color: #7264d6;
 }
 
+.section-label {
+    color: #696d77;
+    line-height: 1.75;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.section-label::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 2px;
+    background-color: currentColor;
+}
+
 /* Header */
 .header {
     padding: 42px 0 12px;
@@ -64,6 +93,8 @@ a {
 .header.sticky {
     position: sticky;
     top: -30px;
+    background-color: #fff;
+    z-index: 1;
 }
 
 .header__cta,
@@ -76,9 +107,7 @@ a {
 
 .header__inner {
     justify-content: space-between;
-}
 
-.header__content {
 }
 
 .nav__list {
@@ -126,4 +155,343 @@ a {
 .header__cta-btn {
     --height: 52px;
     border-radius: 6px;
+}
+
+/* Hero */
+.hero {
+    padding: 64px 0 80px;
+}
+
+.hero__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero__content {
+    width: 46%;
+}
+
+.hero__heading {
+    color: #212832;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.17;
+    margin-top: 12px;
+}
+
+.hero__heading-modify {
+    color: #7264d6;
+}
+
+.hero__desc {
+    margin-top: 20px;
+    color: #696d76;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.hero-form {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    width: 100%;
+    height: 74px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 16px 42px 0px rgba(0, 0, 0, 0.07);
+}
+
+.hero-form__input {
+    border: none;
+    outline: none;
+    width: 60%;
+    height: 100%;
+    padding: 0 8px 0 15px;
+    color: #696d76;
+}
+
+.hero-form__input::placeholder {
+    color: #696d76;
+    line-height: 1.75;
+}
+
+.hero-form__btn {
+    min-width: 149px;
+    background: #7264d6;
+}
+
+.hero__note {
+    margin-top: 20px;
+    color: #696d76;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.71;
+}
+
+.hero__media {
+    width: 49%;
+    padding-left: 100px;
+}
+
+.phone__wrap {
+    position: relative;
+    width: 296px;
+}
+
+.phone-img {
+    width: 100%;
+}
+
+.phone__inner {
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 42px;
+}
+
+.card {
+    width: 100%;
+    border-radius: 20px;
+    background: linear-gradient(76deg, #8679e4 11.52%, #7264d6 70.78%);
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+}
+
+.card::before {
+    content: url(../images/card-decor-1.svg);
+    top: 0;
+}
+
+.card::after {
+    content: url(../images/card-decor-2.svg);
+    bottom: -3px;
+    right: 0;
+    vertical-align: bottom;
+}
+
+.card__top,
+.card__body {
+    position: relative;
+    z-index: 1;
+}
+
+.card__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__top-price,
+.card__top-label {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: normal;
+}
+
+.card__top-price {
+    margin-top: 2px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.circle {
+    width: 40px;
+    height: 24px;
+    position: relative;
+}
+
+.circle::before,
+.circle::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.circle::before {
+    background-color: #fe6565;
+    top: 0;
+    left: 0;
+}
+
+.circle::after {
+    background-color: #feef65;
+    top: 0;
+    right: 0;
+}
+
+.card__body {
+    width: 176px;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 5px 12px;
+}
+
+.card__body-value,
+.card__body-label {
+    color: #fff;
+    font-size: 1rem;
+    line-height: normal;
+}
+
+.card__body-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.phone__body {
+    margin-top: 24px;
+}
+
+.phone__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone__heading {
+    color: #31456a;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.phone__item {
+    margin-top: 28px;
+    display: flex;
+    column-gap: 14px;
+    align-items: center;
+}
+
+.phone__item:nth-child(2) .phone__item-icon {
+    background-color: #da64641a;
+}
+
+.phone__item:nth-child(3) .phone__item-icon {
+    background-color: #439f901a;
+}
+
+.phone__item:nth-child(4) .phone__item-icon {
+    background-color: #7264d61a;
+}
+
+.phone__item-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4ab5e31a;
+}
+
+.phone__item-body {
+    flex: 1;
+}
+
+.phone__row.top {
+    color: #212832;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.phone__row.bottom {
+    margin-top: 6px;
+    color: #696d76;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.phone__decor {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    animation: fade 1s linear infinite alternate;
+}
+
+.phone__decor-1 {
+    top: 113px;
+    left: -100px;
+    padding: 14px 10px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+}
+
+.phone__decor-1-amount,
+.phone__decor-1-desc {
+    color: #31456a;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-left: 8px;
+}
+
+.phone__decor-1-amount {
+    margin-left: 19px;
+    color: #4ab5e3;
+    font-weight: 400;
+}
+
+.phone__decor-2 {
+    bottom: 61px;
+    right: -74px;
+    padding: 20px 14px;
+    border-radius: 10px;
+    background: #439f90;
+}
+
+.phone__decor-2-amount {
+    margin-left: 11px;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.phone__decor-2-desc {
+    margin-left: 11px;
+    margin-top: 5px;
+    color: #fff;
+    font-size: 8px;
+    line-height: 1;
+}
+
+.phone__decor-3 {
+    top: 127px;
+    right: -174px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #da6464;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.phone__decor-3-percent {
+    margin-top: -7px;
+    color: #fff;
+    font-size: 4.4rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.phone__decor-3-desc {
+    margin-top: -16px;
+    color: #fff;
+    line-height: normal;
 }
