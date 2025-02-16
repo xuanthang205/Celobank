@@ -94,6 +94,11 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
+        <!-- AOS animation -->
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/main.css" />
     </head>
@@ -126,7 +131,9 @@
                                     >
                                 </li>
                                 <li>
-                                    <a href="#!" class="nav__list-link">Blog</a>
+                                    <a href="#blog" class="nav__list-link"
+                                        >Blog</a
+                                    >
                                 </li>
                             </ul>
                         </nav>
@@ -916,7 +923,7 @@
                 </div>
             </section>
             <!-- Blog -->
-            <section class="blog">
+            <section id="blog" class="blog">
                 <div class="container">
                     <div class="blog__top">
                         <div class="blog__top-content">
@@ -1040,21 +1047,25 @@
                         </div>
 
                         <img
+                            data-aos="zoom-in-right"
                             src="./assets/images/cta-decor.svg"
                             alt=""
                             class="cta__decor"
                         />
                         <img
+                            data-aos="zoom-in-left"
                             src="./assets/images/cta-decor.svg"
                             alt=""
                             class="cta__decor"
                         />
                         <img
+                            data-aos="flip-left"
                             src="./assets/images/cta-decor.svg"
                             alt=""
                             class="cta__decor"
                         />
                         <img
+                            data-aos="flip-right"
                             src="./assets/images/cta-decor.svg"
                             alt=""
                             class="cta__decor"
@@ -1142,7 +1153,9 @@
                 </div>
             </div>
             <div class="copyright">
-                <p class="copyright__desc">© 2020 Light Media All rights reserved.</p>
+                <p class="copyright__desc">
+                    © 2020 Light Media All rights reserved.
+                </p>
             </div>
         </footer>
 
@@ -1165,6 +1178,13 @@
                     disableOnInteraction: false, // Không dừng autoplay khi người dùng tương tác
                 },
                 loop: true, // Cho phép quay vòng vô hạn
+            });
+        </script>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1500
             });
         </script>
     </body>

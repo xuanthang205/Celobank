@@ -15,6 +15,7 @@ html {
     scroll-margin-top: 76px;
 }
 
+#blog,
 #products {
     scroll-margin-top: 11px;
 }
@@ -561,6 +562,7 @@ a {
     position: absolute;
     background-color: #fff;
     display: flex;
+    animation: fade 1s linear infinite alternate;
 }
 
 .works__decor:first-of-type {
@@ -759,6 +761,7 @@ a {
 .feature__decor {
     display: flex;
     position: absolute;
+    animation: fade 1s linear infinite alternate;
 }
 
 .feature__decor-1 {
